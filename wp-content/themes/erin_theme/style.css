@@ -11,3 +11,59 @@ License:
 License URI: 
 
 ******************************************************************/
+/* Main variables */
+/* Colors */
+/* Typography */
+/* Mixins */
+body {
+  font-size: 15px; }
+
+.row {
+  max-width: 70em; }
+
+.header {
+  height: 4em;
+  margin-top: 3em;
+  display: block;
+  margin-bottom: .3em; }
+  .header .columns {
+    height: 100%; }
+  .header h1 {
+    color: #fc9600;
+    font-family: "ma_sexyregular", sans-serif;
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 1;
+    height: 4em; }
+  .header .nav ul {
+    height: 4em;
+    vertical-align: bottom;
+    position: relative; }
+  .header .nav li {
+    display: inline-block;
+    font-family: "existencelight", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-left: 2em;
+    font-size: 2em;
+    position: relative;
+    height: 100%;
+    line-height: 3em; }
+  .header .nav a {
+    color: #996313; }
+
+.hr {
+  clear: both;
+  height: 16px;
+  margin-bottom: .3em;
+  padding: 0;
+  width: 100%;
+  background: url("img/assets/hr-img.png"); }
+
+.tagline span {
+  font-family: "existencelight", sans-serif;
+  text-transform: uppercase;
+  color: #996313;
+  font-size: 26.25px;
+  padding-left: 5.25em;
+  margin-top: .5em; }

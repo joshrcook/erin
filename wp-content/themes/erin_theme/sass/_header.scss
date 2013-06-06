@@ -1,0 +1,64 @@
+.header {
+	height: 4em;
+	margin-top: 3em;
+	display: block;
+	margin-bottom: .3em;
+
+	.columns {
+		height: 100%;
+	}
+
+	h1 {
+		color: $main-color;
+		font-family: $main-font;
+		font-size: 4em;
+		font-weight: 100;
+		line-height: 1;
+		height: 4em;
+	}
+
+	.nav {
+
+		ul {
+			height: 4em;
+			vertical-align: bottom;
+			position: relative;
+		}
+
+		li {
+			display: inline-block;
+			font-family: $secondary-font;
+			font-weight: 100;
+			text-transform: uppercase;
+			margin-left: 2em;
+			font-size: 2em;
+			position: relative;
+			height: 100%;
+			line-height: 3em;
+		}
+
+		a {
+			color: $secondary-color;
+		}
+	}
+}
+
+.hr {
+	clear: both;
+	height: 16px;
+	margin-bottom: .3em;
+	padding: 0;
+	width: 100%;
+	background: url('img/assets/hr-img.png');
+}
+
+.tagline {
+	span {
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		color: $secondary-color;
+		font-size: $font-size*1.75;
+		padding-left: 5.25em;
+		margin-top: .5em;
+	}
+}

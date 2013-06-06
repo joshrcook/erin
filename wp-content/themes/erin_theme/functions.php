@@ -3,6 +3,18 @@
 /************ INCLUDE THE FOUNDATION CORE ************/
 require_once( get_template_directory() . '/foundation-functions.php');
 
+/************ REGULAR FUNCTIONS ***************/
+function add_scripts_styles() {
+	// add the MA Sexy font
+	wp_register_style('ma-sexy-font', get_template_directory_uri() . '/fonts/ma-sexy/ma-sexy-font.css');
+	wp_enqueue_style('ma-sexy-font');
+	// add the existence font
+	wp_register_style('existence-font', get_template_directory_uri() . '/fonts/existence/existence-font.css');
+	wp_enqueue_style('existence-font');
+}
+
+add_action('wp_enqueue_scripts', 'add_scripts_styles', 9999); // load this LAST
+
 /************ INITIALIZE THE BONES FRAMEWORK ************/
 /*
 Author: Eddie Machado

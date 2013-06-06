@@ -40,22 +40,30 @@
     
     <div class="outer-container">
         
-        <div class="row">
-            <div class="columns large-6">
+        <div class="row header">
+            <div class="columns large-5">
                 <h1 class="background-replace">Erin Svalstad</h1>
             </div>
-            <div class="columns large-6 text-right">
-                <?php 
-                
-                $menu_items = get_nav_menu_items('main-nav');
-                foreach($menu_items as $menu_item) {
-                    echo '<li';
-                    if(isset($post->ID) && $post->ID == $menu_item->object_id) {
-                        echo ' class="selected"';
+            <div class="columns large-7 text-right nav">
+                <ul>
+                    <?php 
+                    
+                    $menu_items = get_nav_menu_items('main-nav');
+                    foreach($menu_items as $menu_item) {
+                        echo '<li';
+                        if(isset($post->ID) && $post->ID == $menu_item->object_id) {
+                            echo ' class="selected"';
+                        }
+                            echo '><span class="bottom"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></span></li>';
                     }
-                        echo '><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
-                }
-                ?>
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <div class="hr clear-fix"></div>
+        <div class="row tagline">
+            <div class="columns large-5">
+                <span>Make-up artist</span>
             </div>
         </div>
 
