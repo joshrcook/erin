@@ -34,11 +34,29 @@
     <?php wp_head(); ?>
     <!-- end of wordpress head -->
 
-    <!-- drop Google Analytics Here -->
-    <!-- end analytics -->
-
 </head>
 
 <body <?php body_class(); ?>>
+    
+    <div class="outer-container">
+        
+        <div class="row">
+            <div class="columns large-6">
+                <h1 class="background-replace">Erin Svalstad</h1>
+            </div>
+            <div class="columns large-6 text-right">
+                <?php 
+                
+                $menu_items = get_nav_menu_items('main-nav');
+                foreach($menu_items as $menu_item) {
+                    echo '<li';
+                    if(isset($post->ID) && $post->ID == $menu_item->object_id) {
+                        echo ' class="selected"';
+                    }
+                        echo '><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+                }
+                ?>
+            </div>
+        </div>
 
             

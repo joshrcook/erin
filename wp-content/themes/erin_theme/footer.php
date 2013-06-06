@@ -1,4 +1,4 @@
-			
+            </div><!-- end .outer-container -->			
 
 		<?php wp_footer(); ?>
 

@@ -166,5 +166,14 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
-
-?>
+/**
+ * Function to get the menu items from a menu, given a slug
+ * 
+ * @param string $menu_slug The menu slug
+ * @return array Manu items
+ */
+function get_nav_menu_items($menu_slug) {
+    $locations = get_nav_menu_locations();
+    $menu = wp_get_nav_menu_object( $locations[ $menu_slug ] );
+    return wp_get_nav_menu_items( $menu->term_id );
+}
