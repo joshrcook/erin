@@ -39,12 +39,27 @@
 <body <?php body_class(); ?>>
     
     <div class="outer-container">
-        
+        <div class="mobile-nav">
+            <ul>
+                <?php 
+                
+                $menu_items = get_nav_menu_items('main-nav');
+                foreach($menu_items as $menu_item) {
+                    echo '<li';
+                    if(isset($post->ID) && $post->ID == $menu_item->object_id) {
+                        echo ' class="selected"';
+                    }
+                        echo '><span class="bottom"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></span></li>';
+                }
+                ?>
+            </ul>
+        </div>
         <div class="row header">
-            <div class="columns large-5">
-                <h1 class="background-replace">Erin Svalstad</h1>
+            <div class="columns large-5 small-8">
+                <h1><span>Erin</span> <span>Svalstad</span></h1>
             </div>
-            <div class="columns large-7 text-right nav">
+            <div class="columns large-7 small-4 text-right nav">
+                <a class="mobile-nav-link" href="#">Menu</a>
                 <ul>
                     <?php 
                     

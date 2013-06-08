@@ -15,6 +15,13 @@ function add_scripts_styles() {
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles', 9999); // load this LAST
 
+function add_footer_scripts_styles() {
+	wp_register_script('mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array('jquery'));
+	wp_enqueue_script('mobile-menu');
+}
+
+add_action('wp_footer', 'add_footer_scripts_styles');
+
 /************ INITIALIZE THE BONES FRAMEWORK ************/
 /*
 Author: Eddie Machado

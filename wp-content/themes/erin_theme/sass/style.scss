@@ -1,4 +1,4 @@
-/******************************************************************
+/*!
 Theme Name: Erin Svalstad Custom Theme
 Theme URI: 
 Description: This theme was built especially for Erin Svalstad.  It is built to be responsive, clean, and easy to use.
@@ -10,20 +10,36 @@ Tags: flexble-width, translation-ready, microformats, rtl-language-support
 License: 
 License URI: 
 
-******************************************************************/
+*/
 
-/* Main variables */
-	/* Colors */
-	$main-color: #fc9600;
-	$secondary-color: #996313;
+@import "normalize";
 
-	/* Typography */
-	$main-font: 'ma_sexyregular', sans-serif;
-	$secondary-font: 'existencelight', sans-serif;
-	$font-size: 15px;
+/*** Personal Resets ***/
+a:focus {
+	outline: none;
+}
 
-/* Mixins */
+/*** Main variables ***/
+/* Colors */
+$main-color: #fc9600;
+$secondary-color: #996313;
+$tertiary-color: #ffc98d;
 
+/* Typography */
+$main-font: 'ma_sexyregular', sans-serif;
+$secondary-font: 'existencelight', sans-serif;
+$font-size: 14px;
+
+/*** Mixins ***/
+@mixin title($font-size) {
+	font-family: $secondary-font;
+	font-size: $font-size * 1em;
+	font-weight: 100;
+	text-transform: uppercase;
+	a {
+		color: $secondary-color;
+	}
+}
 
 
 body {
@@ -33,9 +49,13 @@ body {
 .row {
 	max-width: 70em;
 }
+@import "base";
+@media screen and (min-width: 481px) {
+	@import "481up";
+}
 
-@import "header";
-@import "body";
-@import "footer";
+@media screen and (min-width: 768px) {
+	@import "768up";
+}
 
 
