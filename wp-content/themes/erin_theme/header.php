@@ -19,14 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-    <!--[if IE]>
-            <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-    <![endif]-->
-    <!-- or, set /favicon.ico for IE10 win -->
-    <meta name="msapplication-TileColor" content="#f01d4f">
-    <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -55,10 +48,12 @@
             </ul>
         </div>
         <div class="row header">
-            <div class="columns large-5 small-8">
-                <h1><span>Erin</span> <span>Svalstad</span></h1>
+            <div class="columns large-6 small-8">
+                <a href="<?php echo site_url('/'); ?>">
+                    <h1><span>Erin</span> <span>Svalstad</span></h1>
+                </a>
             </div>
-            <div class="columns large-7 small-4 text-right nav">
+            <div class="columns large-6 small-4 text-right nav">
                 <a class="mobile-nav-link" href="#">Menu</a>
                 <ul>
                     <?php 
@@ -75,9 +70,9 @@
                 </ul>
             </div>
         </div>
-        <div class="hr clear-fix"></div>
+        <div class="hr"></div>
         <div class="row tagline">
-            <div class="columns large-5">
+            <div class="columns">
                 <span>Make-up artist</span>
             </div>
         </div>

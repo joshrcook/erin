@@ -3,8 +3,9 @@ get_header();
 ?>
 
 <div class="row">
-	<div class="columns large-12 small-12 main-image">
-
+	<div class="columns gallery-x">
+		<div class="main-image">
+		</div>
 	</div>
 </div>
 
