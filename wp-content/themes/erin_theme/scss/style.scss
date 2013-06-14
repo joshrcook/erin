@@ -1,0 +1,83 @@
+/*!
+Theme Name: Erin Svalstad Custom Theme
+Theme URI: 
+Description: This theme was built especially for Erin Svalstad.  It is built to be responsive, clean, and easy to use.
+Author: Joshua Cook
+Author URI: http://www.joshrcook.com
+Version: 1.0
+Tags: flexble-width, translation-ready, microformats, rtl-language-support
+
+License: 
+License URI: 
+
+*/
+
+@import "normalize";
+
+/*** Personal Resets ***/
+a:focus {
+	outline: none;
+}
+
+/*** Main variables ***/
+/* Colors */
+$main-color: #fc9600;
+$secondary-color: #996313;
+$tertiary-color: #ffc98d;
+
+/* Typography */
+$main-font: "ma_sexyregular", sans-serif;
+$secondary-font: "existencelight", sans-serif;
+$tertiary-font: 'Open Sans', sans-serif;
+$font-size: 14px;
+
+/*** Mixins ***/
+@mixin title($font-size) {
+	font-family: $secondary-font;
+	font-size: $font-size * 1em;
+	font-weight: 100;
+	text-transform: uppercase;
+	a {
+		color: $secondary-color;
+	}
+}
+
+@mixin columns($column-number) {
+	-moz-column-count: $column-number; /* Firefox */
+	-webkit-column-count: $column-number; /* Safari and Chrome */
+	column-count: $column-number;
+}
+
+
+body {
+	font-size: $font-size;
+	margin-bottom: 5em;
+}
+
+.row {
+	max-width: 70em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $secondary-font;
+	color: $secondary-color;
+}
+
+@import "base";
+@media screen and (min-width: 481px) {
+	@import "481up";
+}
+
+@media screen and (min-width: 768px) {
+	@import "768up";
+}
+
+@media screen and (min-width: 960px) {
+	@import "960up";
+}
+
+@media screen and (min-width: 1030px) {
+	@import "1030up";
+}
+
+

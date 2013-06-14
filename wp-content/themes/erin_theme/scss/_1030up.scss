@@ -1,0 +1,9 @@
+.resume {
+
+	.column-list {
+
+		p {
+			@include columns(4);
+		}
+	}
+}

@@ -531,7 +531,7 @@
 			"file": "wp-content/themes/erin_theme/sass/base.scss",
 			"settings":
 			{
-				"buffer_size": 1433,
+				"buffer_size": 1458,
 				"line_ending": "Unix"
 			}
 		},
@@ -875,7 +875,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -890,8 +890,8 @@
 						"selection":
 						[
 							[
-								1109,
-								1109
+								632,
+								632
 							]
 						],
 						"settings":
@@ -910,15 +910,15 @@
 					"file": "wp-content/themes/erin_theme/sass/base.scss",
 					"settings":
 					{
-						"buffer_size": 1433,
+						"buffer_size": 1458,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								772,
-								772
+								0,
+								0
 							]
 						],
 						"settings":
@@ -927,7 +927,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 128.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -976,7 +976,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1030,7 +1031,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

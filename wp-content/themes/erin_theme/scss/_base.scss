@@ -1,0 +1,123 @@
+/*  Header */
+
+.mobile-nav {
+	display: none;
+	ul {
+		margin: 0;
+		background-color: $main-color;
+		li {
+			@include title(1.7);
+
+			border-bottom: 1px solid $tertiary-color;
+			text-align: center;
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+.header {
+	height: 7.7em;
+	display: block;
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+
+	.columns {
+		height: 100%;
+	}
+
+	h1 {
+		color: $main-color;
+		font-family: $main-font;
+		font-size: 3em;
+		font-weight: 100;
+		line-height: 1.4;
+		height: 2em;
+		margin-top: .2em;
+
+		span {
+			display: block;
+		}
+	}
+
+	.nav {
+
+		a.mobile-nav-link {
+			line-height: 4em;
+			text-transform: uppercase;
+			font-size: 1.75em;
+			font-family: "existencelight", sans-serif;
+		}
+
+		ul {
+			vertical-align: bottom;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		li {
+			display: block;
+			font-family: $secondary-font;
+			font-weight: 100;
+			text-transform: uppercase;
+			font-size: 1em;
+			height: 100%;
+			line-height: 3em;
+		}
+
+		a {
+			color: $secondary-color;
+		}
+	}
+}
+
+.hr {
+	clear: both;
+	height: 8px;
+	margin-bottom: .3em;
+	padding: 0;
+	width: 100%;
+	background: url('img/assets/hr-img-small.png');
+}
+
+.tagline {
+	margin-bottom: 1em;
+	span {
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		color: $secondary-color;
+		font-size: 1.75em;
+		padding-left: .8em;
+		margin-top: .5em;
+	}
+}
+
+/* Body */
+.gallery-x {
+	height: 40em;
+	background-color: grey;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+
+.resume {
+
+	.column-list {
+
+		h2 {
+			font-weight: 100;
+			font-size: 1.75em;
+		}
+
+		p {
+			@include columns(2);
+			font-family: $tertiary-font;
+			margin: 0;
+			font-weight: 300;
+		}
+	}
+}

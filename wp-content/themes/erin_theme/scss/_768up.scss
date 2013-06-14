@@ -1,0 +1,63 @@
+$headerHeight: 7.7;
+
+.mobile-nav {
+	display: none !important;
+}
+
+.header {
+	height: $headerHeight * 1em;
+
+	h1 {
+		font-size: 3em;
+		line-height: 1.48em;
+		font-weight: 500;
+	}
+
+	.nav {
+		position: relative;
+		height: $headerHeight * 1em;
+		display: block;
+
+		a.mobile-nav-link {
+			display: none;
+		}
+
+		ul {
+			display: block;
+			position: absolute;
+			top: auto;
+			bottom: 0;
+			right: 0;
+			height: 1.3em;
+			margin-bottom: 0;
+			padding-right: 0.9375em;
+
+			li {
+				display: inline-block;
+				line-height: 1.2em;
+				@include title(1.5);
+				margin-right: 1em;
+			}
+
+			li:last-child {
+				margin-right: 0;
+			}
+		}
+}
+}
+
+.hr {
+	background: url('img/assets/hr-img.png');
+	height: 16px;
+}
+
+
+.resume {
+
+	.column-list {
+
+		p {
+			@include columns(3);
+		}
+	}
+}

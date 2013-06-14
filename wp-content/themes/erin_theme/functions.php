@@ -11,6 +11,9 @@ function add_scripts_styles() {
 	// add the existence font
 	wp_register_style('existence-font', get_template_directory_uri() . '/fonts/existence/existence-font.css');
 	wp_enqueue_style('existence-font');
+	// add open sans font
+	wp_register_style('open-sans-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+	wp_enqueue_style('open-sans-font');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles', 9999); // load this LAST
