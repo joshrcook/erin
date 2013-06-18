@@ -1,0 +1,8 @@
+.media-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.media-item:last-child{
+    margin-right: 0;
+}

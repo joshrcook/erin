@@ -9,6 +9,10 @@ $headerHeight: 6;
 		span {
 			display: inline-block;
 		}
+                
+                span:last-child {
+                    margin-top: 4px;
+                }
 	}
 
 	.nav {

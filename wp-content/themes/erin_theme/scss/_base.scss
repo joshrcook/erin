@@ -38,7 +38,12 @@
 
 		span {
 			display: block;
+                        vertical-align: top;
 		}
+                
+                span:last-child {
+                    margin-top: 4px;
+                }
 	}
 
 	.nav {
@@ -77,8 +82,8 @@
 .hr {
 	clear: both;
 	height: 8px;
-	margin-bottom: .3em;
 	padding: 0;
+	margin-bottom: .02em;
 	width: 100%;
 	background: url('img/assets/hr-img-small.png');
 }
@@ -90,7 +95,7 @@
 		text-transform: uppercase;
 		color: $secondary-color;
 		font-size: 1.75em;
-		padding-left: .8em;
+		padding-left: .9em;
 		margin-top: .5em;
 	}
 }
@@ -101,6 +106,15 @@
 	background-color: grey;
 	overflow-x: scroll;
 	overflow-y: hidden;
+        
+        .gallery-item {
+        	margin: 0;
+        	display: inline-block;    
+
+        	.gallery-icon.portrait {
+        		margin: 0;
+        	}  
+        }
 }
 
 
