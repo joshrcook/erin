@@ -11,6 +11,10 @@
 	position: relative;
 }
 
+.media-item img:hover {
+	cursor: move;
+}
+
 .media-item span.delete-media {
 	position: absolute;
 	color: red;
