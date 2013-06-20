@@ -45,8 +45,9 @@ jQuery(document).ready(function($) {
    function add_media_item()
    {
        $('.media-items').append('<div class="'+media_item_class+'">\n\
-                            <input type="hidden" name="media-id" class="media-id" value="" />\n\
+                            <input type="hidden" name="media-id[]" class="media-id" value="" />\n\
                             <img src="" class="image-preview img-polaroid" />\n\
+                            <span class="delete-media">X</span>\n\
                             </div>');
    }
    
@@ -58,23 +59,7 @@ jQuery(document).ready(function($) {
    }
    
    
-   $('#sortable').on('click', '.delete-media', function() {
-       var sortableHandle = $(this).closest('tr.sortable-handle');
-       
-       sortableHandle
-       .find('img.image-preview')
-       .remove();
-       
-       sortableHandle
-       .find('.image-preview-column') // find the image preview inside it
-       .prepend('<img class="image-preview" height="100" />'); // add a new, duplicate image element
-       
-       sortableHandle
-       .find('.media-id')
-       .val('');
-   });
-   
-   $('#sortable').on('click', '.delete-slide', function() {
-       $(this).closest('tr.sortable-handle').remove();
+   $('.media-items').on('click', '.delete-media', function() {
+       $(this).closest('.media-item').remove();
    });
 });

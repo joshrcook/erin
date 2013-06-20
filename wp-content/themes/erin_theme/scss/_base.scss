@@ -34,7 +34,7 @@
 		font-weight: 100;
 		line-height: 1.4;
 		height: 2em;
-		margin-top: .2em;
+		margin-top: .27em;
 
 		span {
 			display: block;
@@ -95,26 +95,30 @@
 		text-transform: uppercase;
 		color: $secondary-color;
 		font-size: 1.75em;
-		padding-left: .9em;
+		padding-left: 1.2em;
 		margin-top: .5em;
 	}
 }
 
 /* Body */
 .gallery-x {
-	height: 40em;
-	background-color: grey;
+	width: 100%;
 	overflow-x: scroll;
-	overflow-y: hidden;
-        
-        .gallery-item {
-        	margin: 0;
-        	display: inline-block;    
+	white-space: nowrap;
 
-        	.gallery-icon.portrait {
-        		margin: 0;
-        	}  
-        }
+	ul {
+		margin: 0;
+
+		li {
+			display: inline-block;
+			margin-right: 3px;
+
+			img {
+				height: 35em;
+				width: auto;
+			}
+		}
+	}
 }
 
 
@@ -134,5 +138,26 @@
 			margin: 0;
 			font-weight: 300;
 		}
+	}
+}
+
+/*  Footer */
+
+.social-icon {
+	$socialDiameter: 2.85714285714286;
+	height: $socialDiameter * 1em;
+	width: $socialDiameter * 1em;
+	border-radius: 100px;
+	background-color: $secondary-color;
+	display: inline-block;
+	margin: 1em;
+	text-align: center;
+
+
+	i {
+		$font-size: 2;
+		color: white;
+		font-size: $font-size * 1em;
+		line-height: $socialDiameter / $font-size * 1em;
 	}
 }

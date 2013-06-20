@@ -8,9 +8,10 @@ $headerHeight: 7.7;
 	height: $headerHeight * 1em;
 
 	h1 {
-		font-size: 3em;
-		line-height: 1.48em;
+		font-size: 3.5em;
+		line-height: 1.4em;
 		font-weight: 500;
+		margin-top: -5px;
 	}
 
 	.nav {
@@ -48,7 +49,7 @@ $headerHeight: 7.7;
 
 .hr {
 	background: url('img/assets/hr-img.png');
-	height: 16px;
+	height: 12px;
 }
 
 

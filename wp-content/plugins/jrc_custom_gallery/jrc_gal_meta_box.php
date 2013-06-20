@@ -13,8 +13,26 @@ function jrc_gal_show_meta()
     ?>
 <div class="bootstrap">
     <div class="media">
-        <div class="media-items">
-        </div>
+    	<form method="post">
+    		<?php wp_nonce_field('jrc_gal_save_post', 'jrc_gal_nonce'); ?>
+    		<?php $custom = get_post_custom();
+    		$media_id_array = json_decode($custom['media-id'][0]);
+    		?>
+    		<div class="media-items">
+    		<?php
+    		$attr = array(
+    			'class' => 'image-preview img-polaroid'
+			);
+    		foreach($media_id_array as $media_id) {
+    			?>
+    			<div class="media-item" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    				<input class="media-id" type="hidden" name="media-id[]" value="<?php echo $media_id; ?>" />
+    				<?php echo wp_get_attachment_image($media_id, 'thumbnail', false, $attr); ?>
+    				<span class="delete-media">X</span>
+    			</div>
+			<?php } ?>
+	        </div>
+	    </form>
         <button class="btn btn-primary get-media">Add Image</button>
     </div>
 </div>

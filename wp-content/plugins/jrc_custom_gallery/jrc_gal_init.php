@@ -11,4 +11,4 @@ License: GPL2
 
 require('jrc_gal_functions.php');
 require('jrc_gal_meta_box.php');
-?>
+require('jrc_gal_save_meta.php');

@@ -14,6 +14,9 @@ function add_scripts_styles() {
 	// add open sans font
 	wp_register_style('open-sans-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
 	wp_enqueue_style('open-sans-font');
+	// add Font Awesome
+	wp_register_style('Font-Awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+	wp_enqueue_style('Font-Awesome');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles', 9999); // load this LAST
