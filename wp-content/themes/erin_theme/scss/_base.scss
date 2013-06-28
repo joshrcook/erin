@@ -120,6 +120,8 @@
 				img {
 					height: 35em;
 					width: auto;
+					-webkit-touch-callout: none;
+					@include userSelect(none);
 				}
 			}
 		}

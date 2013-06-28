@@ -3,14 +3,16 @@ var scrollRate = 1000;
 
 jQuery(document).ready(function($) {
 
-    $(".button-right").bind('mousedown touchstart', function () {
+    $(".button-right").bind('mousedown touchstart', function (e) {
+        e.preventDefault();
         animateContentHorizontal('right');
     }).bind('mouseup touchend', function() {
         scrollingDiv.stop();
         console.log('stopped');
     });
 
-    $(".button-left").bind('mousedown touchstart', function () {
+    $(".button-left").bind('mousedown touchstart', function (e) {
+        e.preventDefault();
         animateContentHorizontal('left');
     }).bind('mouseup touchend', function() {
         scrollingDiv.stop();   

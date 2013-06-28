@@ -42,6 +42,14 @@ $font-size: 14px;
 	}
 }
 
+@mixin userSelect($property) {
+	-webkit-user-select: $property;
+	-khtml-user-select: $property;
+	-moz-user-select: $property;
+	-o-user-select: $property;
+	user-select: $property;
+}
+
 @mixin columns($column-number) {
 	-moz-column-count: $column-number; /* Firefox */
 	-webkit-column-count: $column-number; /* Safari and Chrome */
