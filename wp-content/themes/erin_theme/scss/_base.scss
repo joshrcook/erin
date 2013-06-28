@@ -124,6 +124,10 @@
 					@include userSelect(none);
 				}
 			}
+
+			li:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 
