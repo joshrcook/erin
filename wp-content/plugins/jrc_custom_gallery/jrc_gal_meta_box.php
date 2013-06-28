@@ -38,12 +38,3 @@ function jrc_gal_show_meta()
 </div>
     <?php
 }
-
-
-function jrc_gal_save_meta()
-{
-    
-}
-
-add_action('save_post', 'jrc_gal_save_meta');
-

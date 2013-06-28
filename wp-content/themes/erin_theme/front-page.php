@@ -1,21 +1,32 @@
 <?php 
 get_header();
+wp_enqueue_script('button-scrolling');
 ?>
 
-<div class="row gallery-x">
-	<ul>
-	    <?php if(have_posts()): while(have_posts()): the_post();
-	            the_content();
-	            endwhile; 
-	            endif; 
-	    ?>
-	    <?php
-	    $picture_ids = json_decode(get_post_meta($post->ID, 'media-id', true));
-	    foreach($picture_ids as $id) {
-	    	echo '<li>' . wp_get_attachment_image($id, 'large', false) . '</li>';
-	    }
-	    ?>
-	</ul>
+<div class="row button-container">
+	<div class="gallery-x">
+		<ul>
+		    <?php if(have_posts()): while(have_posts()): the_post();
+		            the_content();
+		            endwhile; 
+		            endif; 
+		    ?>
+		    <?php
+		    $picture_ids = json_decode(get_post_meta($post->ID, 'media-id', true));
+		    foreach($picture_ids as $id) {
+		    	echo '<li>' . wp_get_attachment_image($id, 'large', false) . '</li>';
+		    }
+		    ?>
+		</ul>
+	</div>
+	<div class="buttons">
+		<div class="button button-left">
+			<i class="icon-angle-left"></i>
+		</div>
+		<div class="button button-right">
+			<i class="icon-angle-right"></i>
+		</div>
+	</div>
 </div>
 
 <?php

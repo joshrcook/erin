@@ -101,26 +101,52 @@
 }
 
 /* Body */
-.gallery-x {
-	width: 100%;
-	overflow-x: scroll;
-	white-space: nowrap;
 
-	ul {
-		margin: 0;
+.button-container {
+	position: relative;
 
-		li {
-			display: inline-block;
-			margin-right: 3px;
+	.gallery-x {
+		width: 100%;
+		overflow-x: scroll;
+		white-space: nowrap;
 
-			img {
-				height: 35em;
-				width: auto;
+		ul {
+			margin: 0;
+
+			li {
+				display: inline-block;
+				margin-right: 3px;
+
+				img {
+					height: 35em;
+					width: auto;
+				}
 			}
 		}
 	}
-}
 
+	.buttons {
+		position: absolute;
+		right: 10px;
+		bottom: 25px;
+
+		.button {
+			margin: 0;
+			background-color: $main-color;
+			border: none;
+			padding-top: .75em;
+			padding-bottom: .75em;
+
+			i {
+				font-size: 2em;
+			}
+		}
+
+		.button-left {
+			margin-right: 5px;
+		}
+	}
+}
 
 .resume {
 

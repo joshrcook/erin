@@ -17,6 +17,8 @@ function add_scripts_styles() {
 	// add Font Awesome
 	wp_register_style('Font-Awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 	wp_enqueue_style('Font-Awesome');
+
+	wp_register_script('button-scrolling', get_template_directory_uri() . '/js/button-scrolling.js', array('jquery'), false, true);
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles', 9999); // load this LAST

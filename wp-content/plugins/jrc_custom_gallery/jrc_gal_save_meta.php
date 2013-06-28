@@ -31,14 +31,7 @@ function save_jrc_gal($post_id)
 	}
 
 	update_post_meta($post_id, 'media-id', json_encode($ids));
-
-
+	
 }
 
 add_action('save_post', 'save_jrc_gal');
-
-function add_to_ids($data)
-{
-	global $ids;
-	$ids[] = (int)$data;
-}
