@@ -1,5 +1,5 @@
 var scrollingDiv = jQuery('.gallery-x');
-var scrollRate = 500;
+var scrollRate = 450;
 
 jQuery(document).ready(function($) {
 
