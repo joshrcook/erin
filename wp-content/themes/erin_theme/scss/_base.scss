@@ -118,7 +118,7 @@
 				margin-right: 3px;
 
 				img {
-					height: 35em;
+					height: 25em;
 					width: auto;
 					-webkit-touch-callout: none;
 					@include userSelect(none);
@@ -187,7 +187,7 @@
 
 
 	i {
-		$font-size: 2;
+		$font-size: 1.7;
 		color: white;
 		font-size: $font-size * 1em;
 		line-height: $socialDiameter / $font-size * 1em;
