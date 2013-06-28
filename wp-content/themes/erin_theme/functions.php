@@ -30,6 +30,10 @@ function add_footer_scripts_styles() {
 
 add_action('wp_footer', 'add_footer_scripts_styles');
 
+if(function_exists('add_image_size')) {
+	add_image_size('slider-image', 9999, 560);
+}
+
 /************ INITIALIZE THE BONES FRAMEWORK ************/
 /*
 Author: Eddie Machado

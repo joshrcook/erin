@@ -21,9 +21,10 @@ a:focus {
 
 /*** Main variables ***/
 /* Colors */
-$main-color: #fc9600;
-$secondary-color: #996313;
-$tertiary-color: #ffc98d;
+$main-color: #fc9600; /* Orange */
+$secondary-color: #996313; /* Dark Brown */
+$tertiary-color: #ffc98d; /* Light Orange */
+$color4: #ffebd4; /* Even lighter orange */
 
 /* Typography */
 $main-font: "ma_sexyregular", sans-serif;
@@ -60,6 +61,15 @@ $font-size: 14px;
 body {
 	font-size: $font-size;
 	font-family: $tertiary-font;
+}
+
+/* Cannot combine these selectors */
+::-moz-selection {
+    background-color: $color4;
+}
+
+::selection {
+    background-color: $color4;
 }
 
 .row {

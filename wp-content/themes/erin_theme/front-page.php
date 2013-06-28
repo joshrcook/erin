@@ -14,7 +14,7 @@ wp_enqueue_script('button-scrolling');
 		    <?php
 		    $picture_ids = json_decode(get_post_meta($post->ID, 'media-id', true));
 		    foreach($picture_ids as $id) {
-		    	echo '<li>' . wp_get_attachment_image($id, 'large', false) . '</li>';
+		    	echo '<li>' . wp_get_attachment_image($id, 'slider-image', false) . '</li>';
 		    }
 		    ?>
 		</ul>

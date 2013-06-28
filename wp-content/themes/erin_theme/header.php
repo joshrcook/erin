@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class="columns large-6 small-4 text-right nav">
-                <a class="mobile-nav-link" href="#">Menu</a>
+                <a class="mobile-nav-link" href="#" onclick="event.preventDefault ? event.preventDefault() : event.returnValue = false;">Menu</a>
                 <ul>
                     <?php 
                     
