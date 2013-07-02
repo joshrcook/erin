@@ -1,5 +1,9 @@
 <?php 
 get_header();
+/*
+	Template Name: Image Gallery
+*/
+
 wp_enqueue_script('button-scrolling');
 ?>
 
@@ -13,9 +17,11 @@ wp_enqueue_script('button-scrolling');
 		    ?>
 		    <?php
 		    $picture_ids = json_decode(get_post_meta($post->ID, 'media-id', true));
-		    foreach($picture_ids as $id) {
-		    	echo '<li>' . wp_get_attachment_image($id, 'slider-image', false) . '</li>';
-		    }
+		    if($picture_ids) {
+			    foreach($picture_ids as $id) {
+			    	echo '<li>' . wp_get_attachment_image($id, 'slider-image', false) . '</li>';
+			    }
+			} // endif
 		    ?>
 		</ul>
 	</div>

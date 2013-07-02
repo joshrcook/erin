@@ -26,11 +26,13 @@ function save_jrc_gal($post_id)
 
 	global $ids;
 
+	if($_POST['media-id']) {
 	foreach($_POST['media-id'] as $id) {
 		$ids[] = (int)$id;
 	}
 
 	update_post_meta($post_id, 'media-id', json_encode($ids));
+	}
 	
 }
 

@@ -61,6 +61,24 @@ $font-size: 14px;
 body {
 	font-size: $font-size;
 	font-family: $tertiary-font;
+	color: darken($secondary-color, 3%);
+}
+
+form.contact-form {
+
+	label, label span {
+		color: darken($secondary-color, 3%);
+	}
+}
+
+input[type=text], input[type=email], textarea {
+
+	&:focus {
+		-webkit-box-shadow: 0 0 5px lighten($main-color, 20%);
+		-moz-box-shadow: 0 0 5px lighten($main-color, 20%);
+		box-shadow: 0 0 5px lighten($main-color, 20%);
+		border-color: lighten($main-color, 20%);
+	}
 }
 
 /* Cannot combine these selectors */
@@ -79,6 +97,24 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $secondary-font;
 	color: $secondary-color;
+}
+
+a {
+	color: $main-color;
+	font-weight: bold;
+
+	&:hover {
+		color: $tertiary-color;
+	}
+}
+
+input[type=submit] {
+	background-color: $main-color;
+	border: 1px solid darken($main-color, 10%);
+	border-radius: 3px;
+	padding: 10px;
+	color: lighten($main-color, 70%);
+	text-transform: uppercase;
 }
 
 @import "base";

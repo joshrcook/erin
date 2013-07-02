@@ -59,6 +59,7 @@
                     <?php 
                     
                     $menu_items = get_nav_menu_items('main-nav');
+                    if($menu_items) {
                     foreach($menu_items as $menu_item) {
                         echo '<li';
                         if(isset($post->ID) && $post->ID == $menu_item->object_id) {
@@ -66,6 +67,7 @@
                         }
                             echo '><span class="bottom"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></span></li>';
                     }
+                } // endif
                     ?>
                 </ul>
             </div>

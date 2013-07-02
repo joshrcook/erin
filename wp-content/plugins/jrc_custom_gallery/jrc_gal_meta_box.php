@@ -23,6 +23,7 @@ function jrc_gal_show_meta()
     		$attr = array(
     			'class' => 'image-preview img-polaroid'
 			);
+            if($media_id_array) {
     		foreach($media_id_array as $media_id) {
     			?>
     			<div class="media-item" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
@@ -30,7 +31,8 @@ function jrc_gal_show_meta()
     				<?php echo wp_get_attachment_image($media_id, 'thumbnail', false, $attr); ?>
     				<span class="delete-media">X</span>
     			</div>
-			<?php } ?>
+			<?php } 
+            } ?>
 	        </div>
 	    </form>
         <button class="btn btn-primary get-media">Add Image</button>
