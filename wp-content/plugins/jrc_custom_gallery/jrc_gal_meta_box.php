@@ -25,6 +25,7 @@ function jrc_gal_show_meta()
 			);
             if($media_id_array) {
     		foreach($media_id_array as $media_id) {
+                if(wp_get_attachment_image($media_id)) {
     			?>
     			<div class="media-item" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
     				<input class="media-id" type="hidden" name="media-id[]" value="<?php echo $media_id; ?>" />
@@ -32,6 +33,7 @@ function jrc_gal_show_meta()
     				<span class="delete-media">X</span>
     			</div>
 			<?php } 
+                }
             } ?>
 	        </div>
 	    </form>
