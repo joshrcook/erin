@@ -2,7 +2,7 @@
 
 function jrc_gal_add_meta_boxes()
 {
-    add_meta_box('jrc-gal', 'Gallery', 'jrc_gal_show_meta', 'page', 'normal', 'default');
+    add_meta_box('jrc-gal', 'Gallery', 'jrc_gal_show_meta', 'jrc_gal', 'normal', 'default');
 }
 
 add_action('add_meta_boxes', 'jrc_gal_add_meta_boxes');

@@ -519,6 +519,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "wp-content/themes/erin_theme/scss/_base.scss",
+			"settings":
+			{
+				"buffer_size": 2783,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/erin_theme/scss/_768up.scss",
+			"settings":
+			{
+				"buffer_size": 784,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -690,6 +706,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<div class=\"columns large-3 small-3\">",
+			"<div class=\"columns large-9 small-9\">",
+			"|&nbsp;<li>",
+			"</li>\n						<li>",
+			"&nbsp;|",
+			"</div>\n						</div>",
+			"<div class=\"row\">",
+			"<a href=\"#\">",
+			"|",
+			"</li>",
+			"<li>",
+			"<li class=\"social-block\">",
+			"</p>",
+			"<p>",
+			"p",
+			"div",
+			"vimeo",
 			"$secondary-color",
 			"property",
 			"none",
@@ -800,24 +833,7 @@
 			"continue",
 			"update",
 			"print_r",
-			"uppercase",
-			"print_r",
-			"selected_month",
-			"$_GET['semester_code']",
-			"$result3",
-			"$_SESSION",
-			"query2",
-			"query",
-			"$selected_month",
-			"current_month_array",
-			"selected_date",
-			"php",
-			"php_date",
-			"month-name",
-			"month_name",
-			"list_mon",
-			"print_r",
-			"explode"
+			"uppercase"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -838,8 +854,63 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/erin_theme/scss/_base.scss",
+					"settings":
+					{
+						"buffer_size": 2783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1522,
+								1522
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1243.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/erin_theme/scss/_768up.scss",
+					"settings":
+					{
+						"buffer_size": 784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								709,
+								709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 230.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
