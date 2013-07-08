@@ -28,9 +28,29 @@ function add_scripts_styles_admin()
 
     // enqueue the thickbox styles
     wp_enqueue_style('thickbox');
+
+
 }
 
 add_action('admin_enqueue_scripts', 'add_scripts_styles_admin');
+
+function jrc_gal_scripts_styles() {
+    
+    // register the button-scrolling script
+    wp_register_script('button-scrolling', plugins_url() . '/jrc_custom_gallery/js/button-scrolling.js', array('jquery'));
+}
+
+add_action('wp_enqueue_scripts', 'jrc_gal_scripts_styles');
+
+function jrc_gal_load_shortcode_scripts() {
+    if( !$add_button_scripts) {
+        return;
+    } else {
+        wp_enqueue_script('button-scrolling');
+    } 
+}
+
+add_action('wp_footer', 'jrc_gal_load_shortcode_scripts');
 
 add_filter( 'manage_edit-jrc_gal_columns', 'set_custom_edit_jrc_gal_columns' );
 add_action( 'manage_jrc_gal_posts_custom_column' , 'custom_jrc_gal_columns', 10, 2 );

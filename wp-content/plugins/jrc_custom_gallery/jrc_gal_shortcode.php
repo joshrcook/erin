@@ -5,6 +5,10 @@ function jrc_gallery_shortcode($atts = array()) {
 		'id' => ''
 	), $atts));
 
+	global $add_button_scripts;
+
+	$add_button_scripts = true;
+
 	wp_enqueue_script('button-scrolling');
 
 	if(get_post_type($id) == 'jrc_gal') { // insert it if it's actually a gallery
@@ -32,7 +36,7 @@ function jrc_gallery_shortcode($atts = array()) {
 		</div>';
 
 	return $gallery;
-	
+
 	}
 }
 
