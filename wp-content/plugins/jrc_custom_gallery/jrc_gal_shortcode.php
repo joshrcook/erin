@@ -8,18 +8,18 @@ function jrc_gallery_shortcode($atts = array()) {
 	wp_enqueue_script('button-scrolling');
 
 	if(get_post_type($id) == 'jrc_gal') { // insert it if it's actually a gallery
-	echo '<div class="row button-container">
+	$gallery = '<div class="row button-container">
 			<div class="jrc-gallery">
 				<ul>';
 
 				    $picture_ids = json_decode(get_post_meta($id, 'media-id', true));
 				    if($picture_ids) {
 					    foreach($picture_ids as $pic_id) {
-					    	echo '<li>' . wp_get_attachment_image($pic_id, 'slider-image', false) . '</li>';
+					    	$gallery .= '<li>' . wp_get_attachment_image($pic_id, 'slider-image', false) . '</li>';
 					    }
 					} // endif
 
-				echo '</ul>
+				$gallery .= '</ul>
 			</div>
 			<div class="buttons">
 				<div class="button button-left">
@@ -30,6 +30,9 @@ function jrc_gallery_shortcode($atts = array()) {
 				</div>
 			</div>
 		</div>';
+
+	return $gallery;
+	
 	}
 }
 
