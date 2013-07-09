@@ -117,12 +117,23 @@
 			li {
 				display: inline-block;
 				margin-right: 3px;
+				position: relative;
 
 				img {
 					height: 25em;
 					width: auto;
 					-webkit-touch-callout: none;
 					@include userSelect(none);
+				}
+
+				span {
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					left: 0;
+					text-align: center;
+					padding: .5em;
+					background-color: rgba(255,255,255, .6);
 				}
 			}
 

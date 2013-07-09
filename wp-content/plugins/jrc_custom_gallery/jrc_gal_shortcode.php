@@ -19,7 +19,14 @@ function jrc_gallery_shortcode($atts = array()) {
 				    $picture_ids = json_decode(get_post_meta($id, 'media-id', true));
 				    if($picture_ids) {
 					    foreach($picture_ids as $pic_id) {
-					    	$gallery .= '<li>' . wp_get_attachment_image($pic_id, 'slider-image', false) . '</li>';
+					    	$attachment = get_post($pic_id);
+					    	// print_r($attachment);
+
+					    	$gallery .= '<li>' . wp_get_attachment_image($pic_id, 'slider-image', false);
+					    	if($attachment->post_excerpt) {
+					    		$gallery .= '<span class="caption">' . $attachment->post_excerpt . '</span>';
+					    	}
+					    	$gallery .= '</li>';
 					    }
 					} // endif
 
