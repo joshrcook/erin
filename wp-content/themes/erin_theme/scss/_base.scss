@@ -138,6 +138,7 @@ p {
 					text-align: center;
 					padding: .5em;
 					background-color: rgba(255,255,255, .6);
+					font-weight: 300;
 				}
 			}
 
@@ -148,16 +149,17 @@ p {
 	}
 
 	.buttons {
-		position: absolute;
-		right: 10px;
-		bottom: 25px;
+		width: 100%;
 
 		.button {
+			padding-bottom: .75em;
 			margin: 0;
-			background-color: $main-color;
+			background-color: #fc9600;
 			border: none;
 			padding-top: .75em;
-			padding-bottom: .75em;
+			width: 49.5%;
+			display: inline-block;
+			float: left;
 
 			i {
 				font-size: 2em;
@@ -165,7 +167,7 @@ p {
 		}
 
 		.button-left {
-			margin-right: 5px;
+			margin-right: 1%;
 		}
 	}
 }
