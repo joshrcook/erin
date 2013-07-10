@@ -29,7 +29,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> ondragstart="return false" onselectstart="return false">
     
     <div class="outer-container">
         <div class="mobile-nav">
